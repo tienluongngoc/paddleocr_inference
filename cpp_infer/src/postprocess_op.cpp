@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <include/postprocess_op.h>
-#include <include/clipper.cpp>
+#include <postprocess_op.h>
+#include <clipper.cpp>
 
 namespace PaddleOCR {
 

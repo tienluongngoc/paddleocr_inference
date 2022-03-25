@@ -27,7 +27,7 @@
 #include <fstream>
 #include <numeric>
 
-#include <include/preprocess_op.h>
+#include <preprocess_op.h>
 
 namespace PaddleOCR {
 

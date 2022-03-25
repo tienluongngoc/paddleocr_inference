@@ -29,10 +29,10 @@
 #include <fstream>
 #include <numeric>
 
-#include <include/ocr_cls.h>
-#include <include/postprocess_op.h>
-#include <include/preprocess_op.h>
-#include <include/utility.h>
+#include <ocr_cls.h>
+#include <postprocess_op.h>
+#include <preprocess_op.h>
+#include <utility.h>
 
 using namespace paddle_infer;
 

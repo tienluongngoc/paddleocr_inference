@@ -29,8 +29,8 @@
 #include <fstream>
 #include <numeric>
 
-#include <include/preprocess_op.h>
-#include <include/utility.h>
+#include <preprocess_op.h>
+#include <utility.h>
 
 using namespace paddle_infer;
 

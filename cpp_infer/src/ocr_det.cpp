@@ -12,26 +12,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <include/ocr_det.h>
+#include <ocr_det.h>
 
 
 namespace PaddleOCR {
 
 void DBDetector::LoadModel(const std::string &model_dir) {
   //   AnalysisConfig config;
-  paddle_infer::Config config;
+  paddle_infer::PPConfig config;
   config.SetModel(model_dir + "/inference.pdmodel",
                   model_dir + "/inference.pdiparams");
 
   if (this->use_gpu_) {
     config.EnableUseGpu(this->gpu_mem_, this->gpu_id_);
     if (this->use_tensorrt_) {
-      auto precision = paddle_infer::Config::Precision::kFloat32;
+      auto precision = paddle_infer::PPConfig::Precision::kFloat32;
       if (this->precision_ == "fp16") {
-        precision = paddle_infer::Config::Precision::kHalf;
+        precision = paddle_infer::PPConfig::Precision::kHalf;
       }
      if (this->precision_ == "int8") {
-        precision = paddle_infer::Config::Precision::kInt8;
+        precision = paddle_infer::PPConfig::Precision::kInt8;
       } 
       config.EnableTensorRtEngine(
           1 << 20, 10, 3,
